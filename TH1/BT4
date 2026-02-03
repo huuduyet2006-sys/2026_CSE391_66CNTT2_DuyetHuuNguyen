@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; font-size: 13px; }
+        .form-container { background: white; max-width: 650px; margin: 0 auto; padding: 15px; border: 1px solid #ddd; }
+        
+        /* Tiêu đề phần */
+        h2 { font-size: 14px; border-bottom: 1px solid #333; margin: 20px 0 10px 0; padding-bottom: 3px; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 4px 0; vertical-align: top; }
+        .label-cell { width: 160px; font-weight: bold; }
+        
+        /* Input & Select */
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 3px;
+            border: 1px solid #888;
+            box-sizing: border-box;
+        }
+        
+        .radio-group label { display: block; margin-bottom: 2px; }
+        
+        /* Captcha & Buttons */
+        .captcha { font-family: "Courier New", monospace; font-size: 20px; letter-spacing: 5px; margin: 10px 0; }
+        .footer { text-align: right; border-top: 1px solid #ccc; padding-top: 10px; margin-top: 20px; }
+        
+        button { padding: 4px 12px; cursor: pointer; border: 1px solid #555; }
+        .btn-submit { background-color: #333; color: white; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <h2>Basic Info</h2>
+        <table>
+            <tr>
+                <td class="label-cell">Employee ID</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Last Name</td>
+                <td>Dodsworth</td>
+            </tr>
+            <tr>
+                <td class="label-cell">First Name</td>
+                <td><input type="text" value="Anne"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Gender</td>
+                <td class="radio-group">
+                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> XXX</label>
+                    <label><input type="radio" name="gender" checked> ZZZ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">Title</td>
+                <td><input type="text" value="Sales Representative"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Suffix</td>
+                <td><input type="text" value="Ms."></td>
+            </tr>
+            <tr>
+                <td class="label-cell">BirthDate</td>
+                <td><input type="text" value="1969-07-02 00:00:00"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">HireDate</td>
+                <td><input type="text" value="1994-11-15 00:00:00"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">SSN # (if applicable)</td>
+                <td><input type="password" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Reports To</td>
+                <td>
+                    <select style="width: auto;">
+                        <option>Buchanan</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Contact Info</h2>
+        <table>
+            <tr>
+                <td class="label-cell">Email</td>
+                <td><input type="email" placeholder="name@example.com"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Address</td>
+                <td><input type="text" value="7 Houndstooth Rd."></td>
+            </tr>
+            <tr>
+                <td class="label-cell">City</td>
+                <td><input type="text" value="London"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Region</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Postal Code</td>
+                <td><input type="text" value="WG2 7LT"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Country</td>
+                <td>
+                    <select>
+                        <option>Russian Federation</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">US Home Phone</td>
+                <td><input type="tel" value="(234)234-2342"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Photo</td>
+                <td><input type="text" value="EmpID9.bmp"></td>
+            </tr>
+        </table>
+
+        <h2>Optional Info</h2>
+        <table>
+            <tr>
+                <td class="label-cell">Notes</td>
+                <td><textarea rows="5">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Preferred Shift</td>
+                <td>
+                    <label style="margin-right: 10px;"><input type="checkbox"> Regular</label>
+                    <label><input type="checkbox" checked> Gravy Yard</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">Active?</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Are you human?</td>
+                <td>
+                    <div class="captcha">T I D A W O</div>
+                    <small style="color: blue; text-decoration: underline; cursor: pointer;">Click to change</small>
+                    <input type="text" style="margin-top: 5px;">
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <button type="submit" class="btn-submit">💾 Submit</button>
+            <button type="reset">✖ Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
