@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Employee Modal</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 50px; }
+        
+        .modal {
+            width: 600px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #007bff;
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .close-btn { cursor: pointer; font-size: 1.5rem; line-height: 1; }
+
+        .modal-body { padding: 20px; }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group { margin-bottom: 15px; }
+
+        label { display: block; margin-bottom: 8px; color: #333; font-size: 0.9rem; }
+
+        input[type="text"], 
+        input[type="email"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        .radio-group { display: flex; gap: 15px; align-items: center; margin-top: 10px; }
+        .radio-option { display: flex; align-items: center; gap: 5px; font-size: 0.9rem; }
+
+        .modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-save { background-color: #198754; color: white; }
+        .btn-cancel { background-color: #6c757d; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="modal">
+    <div class="modal-header">
+        <span>New Employee</span>
+        <span class="close-btn">&times;</span>
+    </div>
+    
+    <div class="modal-body">
+        <form id="employeeForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>Position</label>
+                    <select>
+                        <option>-- Select Position --</option>
+                        <option>Staff</option>
+                        <option>Manager</option>
+                        <option>CEO</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Sex</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="sex" id="male"> <label for="male" style="margin:0">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="sex" id="female"> <label for="female" style="margin:0">Female</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" form="employeeForm" class="btn btn-save">Save</button>
+        <button type="button" class="btn btn-cancel">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
