@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 800px;
+    margin: 40px auto;
+    background: #eee;
+    padding: 25px;
+    border: 2px solid black;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Row dùng Flexbox */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+/* Input chung */
+input, textarea {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Textarea lớn */
+textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+/* Hàng cuối */
+.bottom-row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button */
+button {
+    background-color: #5dade2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Note */
+.note {
+    font-size: 13px;
+    color: gray;
+}
