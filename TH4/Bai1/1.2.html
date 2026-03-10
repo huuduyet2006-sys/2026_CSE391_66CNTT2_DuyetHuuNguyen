@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sinh Viên 1.2 - Duyệt 66CNTT2</title>
+    <link rel="stylesheet" href="1.2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Quản lý Điểm Sinh Viên (Nâng cao)</h2>
+        
+        <div class="input-section">
+            <input type="text" id="txtName" placeholder="Họ tên">
+            <input type="number" id="txtScore" placeholder="Điểm (0-10)" step="0.1">
+            <button id="btnAdd">Thêm</button>
+        </div>
+
+        <div class="filter-section">
+            <input type="text" id="searchName" placeholder="Tìm tên sinh viên...">
+            <select id="filterRank">
+                <option value="all">Tất cả xếp loại</option>
+                <option value="Giỏi">Giỏi</option>
+                <option value="Khá">Khá</option>
+                <option value="Trung bình">Trung bình</option>
+                <option value="Yếu">Yếu</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th id="colScore" style="cursor: pointer;">Điểm <span id="sortIcon">↕</span></th>
+                    <th>Xếp loại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+
+        <div id="statistics">
+            Tổng số: <span id="totalCount">0</span> | Điểm TB: <span id="avgScore">0</span>
+        </div>
+    </div>
+    <script src="1.2.js"></script>
+</body>
+</html>

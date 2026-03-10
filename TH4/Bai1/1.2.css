@@ -1,0 +1,20 @@
+body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+.container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+
+.input-section, .filter-section { display: flex; gap: 10px; margin-bottom: 15px; }
+.filter-section { background: #e9ecef; padding: 10px; border-radius: 4px; }
+
+input, select, button { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+#btnAdd { background-color: #28a745; color: white; cursor: pointer; border: none; }
+#searchName { flex: 2; }
+#filterRank { flex: 1; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+th { background-color: #007bff; color: white; }
+
+/* Chỉ bôi vàng thằng Yếu */
+.bg-yellow { background-color: #ffff99 !important; }
+
+.btn-del { background-color: #dc3545; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; }
+#statistics { margin-top: 15px; font-weight: bold; }
